@@ -1,0 +1,1 @@
+# agh-exhibition-app
