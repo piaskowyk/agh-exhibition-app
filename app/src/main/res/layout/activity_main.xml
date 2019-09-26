@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/frequencyTxt"
-        android:layout_width="wrap_content"
+        android:layout_width="264dp"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="600 Hz"
         android:textColor="#333"
         android:textSize="36sp"
@@ -22,8 +24,8 @@
 
     <Button
         android:id="@+id/playBtn"
-        android:layout_width="110dp"
-        android:layout_height="wrap_content"
+        android:layout_width="190dp"
+        android:layout_height="70dp"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="40dp"
@@ -33,8 +35,8 @@
 
     <Button
         android:id="@+id/stopBtn"
-        android:layout_width="110dp"
-        android:layout_height="wrap_content"
+        android:layout_width="190dp"
+        android:layout_height="70dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
@@ -44,70 +46,79 @@
 
     <SeekBar
         android:id="@+id/frequencySlide"
-        android:layout_width="352dp"
+        android:layout_width="924dp"
         android:layout_height="46dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="36dp"
+        android:background="@android:color/darker_gray"
         android:max="23999"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/decrementFrequency"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="100dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="176dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
         android:text="-"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/playBtn" />
+        app:layout_constraintEnd_toStartOf="@+id/frequencyTxt"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/decrementFrequency2"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginLeft="136dp"
+        android:layout_marginTop="176dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:text="-10"
+        app:layout_constraintEnd_toStartOf="@+id/decrementFrequency"
+        app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/decrementFrequency" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/incrementFrequency"
-        android:layout_width="49dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="176dp"
         android:text="+"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/stopBtn" />
+        app:layout_constraintStart_toEndOf="@+id/frequencyTxt"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/incrementFrequency2"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="176dp"
+        android:layout_marginEnd="192dp"
+        android:layout_marginRight="192dp"
         android:text="+10"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/incrementFrequency" />
+        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintStart_toEndOf="@+id/incrementFrequency"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/applyFrequency"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginBottom="40dp"
+        android:layout_width="123dp"
+        android:layout_height="63dp"
+        android:layout_marginEnd="360dp"
+        android:layout_marginRight="360dp"
+        android:layout_marginBottom="20dp"
         android:text="@android:string/ok"
         app:layout_constraintBottom_toTopOf="@+id/frequencySlide"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -116,9 +127,9 @@
         android:id="@+id/frequencyInput"
         android:layout_width="159dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginStart="344dp"
+        android:layout_marginLeft="344dp"
+        android:layout_marginBottom="28dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/frequencySlide"
